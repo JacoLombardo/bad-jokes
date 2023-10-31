@@ -1,10 +1,16 @@
 import styles from "@/styles/card.module.css";
+import { Dispatch, SetStateAction } from "react";
 
-export default function Card({ word }: any) {
+interface Props {
+  word: string;
+  setSelectedWords: Dispatch<SetStateAction<string[]>>;
+}
+
+export default function Card({ word, setSelectedWords }: Props) {
   return (
     <>
       <div className={styles.card}>
-        <p>{word}</p>
+        <h1 className={styles.card_title}>{word}</h1>
       </div>
     </>
   );
