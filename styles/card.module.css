@@ -12,11 +12,21 @@
 .card {
   width: 80px;
   height: 80px;
+  background-color: coral;
   border-radius: 10px;
   border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: darkred;
+  color: white;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
 }
 
 .card_title {
@@ -38,21 +48,47 @@
   display: inline-block;
 }
 
-.avatar .tooltiptext {
+.tooltiptext0,
+.tooltiptext1,
+.tooltiptext2 {
   position: absolute;
-  width: 120px;
-  height: 40px;
+  width: 80px;
+  height: 55px;
   background-color: white;
   text-align: center;
-  border-radius: 15px;
-  padding: 5px 0;
+  border-radius: 25px;
+  padding: 15px 0;
   z-index: 1;
-  bottom: 150%;
-
-  content: "";
-  margin-left: -5px;
-  border-width: 5px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 10px;
 }
 
-.tooltiptext {
+.avatar .tooltiptext0::after,
+.avatar .tooltiptext1::after,
+.avatar .tooltiptext2::after {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+}
+
+.avatar .tooltiptext0::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-color: white transparent transparent transparent;
+}
+
+.avatar .tooltiptext1::after {
+  top: 40%;
+  right: 98%;
+  margin-top: -5px;
+  border-color: transparent white transparent transparent;
+}
+
+.avatar .tooltiptext2::after {
+  top: 40%;
+  left: 99%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent white;
 }

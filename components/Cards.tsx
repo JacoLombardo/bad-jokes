@@ -9,20 +9,25 @@ interface Props {
 
 export default function Cards({ selectedWords, setSelectedWords }: Props) {
   const words: string[] = [
-    "cat",
-    "giant",
-    "sneeze",
-    "sun",
-    "tree",
-    "pluton",
-    "flying",
+    "Cat",
+    "Giant",
+    "Sneeze",
+    "Sun",
+    "Tree",
+    "Pluton",
+    "Flying",
   ];
   return (
     <>
       <div className={styles.card_container}>
         {words.map((word, index) => {
           return (
-            <Card key={index} word={word} setSelectedWords={setSelectedWords} />
+            <Card
+              key={index}
+              word={word}
+              selectedWords={selectedWords}
+              setSelectedWords={setSelectedWords}
+            />
           );
         })}
       </div>

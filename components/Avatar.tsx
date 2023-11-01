@@ -11,7 +11,7 @@ export default function Avatar({ selectedWords }: Props) {
       <div className={styles.avatar_container}>
         <div className={styles.avatar}>
           <Image
-            src={"/Media/Avatar/good.png"}
+            src={"/Media/Avatar/stressed.png"}
             title="test"
             alt="test"
             width={"150"}
@@ -19,11 +19,10 @@ export default function Avatar({ selectedWords }: Props) {
           />
           {selectedWords[0] && (
             <span
-              className={styles.tooltiptext}
+              className={styles.tooltiptext0}
               style={{
-                //   bottom: "150%",
-                top: "-30%",
-                left: "20%",
+                top: "-40%",
+                left: "30%",
               }}
             >
               {selectedWords[0]}
@@ -31,9 +30,9 @@ export default function Avatar({ selectedWords }: Props) {
           )}
           {selectedWords[1] && (
             <span
-              className={styles.tooltiptext}
+              className={styles.tooltiptext1}
               style={{
-                top: "40%",
+                top: "15%",
                 left: "110%",
               }}
             >
@@ -42,10 +41,10 @@ export default function Avatar({ selectedWords }: Props) {
           )}
           {selectedWords[2] && (
             <span
-              className={styles.tooltiptext}
+              className={styles.tooltiptext2}
               style={{
-                top: "40%",
-                right: "110%",
+                top: "15%",
+                right: "100%",
               }}
             >
               {selectedWords[2]}
@@ -53,6 +52,13 @@ export default function Avatar({ selectedWords }: Props) {
           )}
         </div>
       </div>
+      <button
+        onClick={() => {
+          console.log("selectedWords", selectedWords);
+        }}
+      >
+        Selected
+      </button>
     </>
   );
 }

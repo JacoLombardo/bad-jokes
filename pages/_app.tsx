@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }: any) {
           href="https://res.cloudinary.com/dtl48kr1u/image/upload/v1694445159/personal-site/j_nx7enz.png"
           sizes="any"
         />
-        <title>Dad Jokes</title>
+        <title>Bad Jokes</title>
       </Head>
       <Component {...pageProps} />
     </>

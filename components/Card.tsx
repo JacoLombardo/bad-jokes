@@ -1,17 +1,48 @@
 import styles from "@/styles/card.module.css";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 interface Props {
   word: string;
+  selectedWords: string[];
   setSelectedWords: Dispatch<SetStateAction<string[]>>;
 }
 
-export default function Card({ word, setSelectedWords }: Props) {
+export default function Card({ word, selectedWords, setSelectedWords }: Props) {
+  const [showError, setShowError] = useState<boolean>(false);
+
+  const selectWord = () => {
+    if (selectedWords.length <= 2 && !selectedWords.includes(word)) {
+      setSelectedWords([...selectedWords, word]);
+    } else if (selectedWords.includes(word)) {
+      setSelectedWords((current) =>
+        current.filter((wordz) => {
+          return wordz !== word;
+        })
+      );
+    } else {
+      setShowError(true);
+      setTimeout(() => {
+        setShowError(false);
+      }, 1000);
+    }
+  };
+
   return (
     <>
-      <div className={styles.card}>
-        <h1 className={styles.card_title}>{word}</h1>
-      </div>
+      <a onClick={selectWord}>
+        <div
+          className={styles.card}
+          style={
+            selectedWords.includes(word)
+              ? { backgroundColor: "darkred", color: "white" }
+              : {}
+          }
+        >
+          <h1 className={styles.card_title}>{word}</h1>
+        </div>
+
+        {showError && <p>Max words reached</p>}
+      </a>
     </>
   );
 }
