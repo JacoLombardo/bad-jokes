@@ -39,9 +39,12 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
           }
         >
           <h1 className={styles.card_title}>{word}</h1>
+          {showError && (
+            <span className={styles.tooltiptext}>Max words number reached</span>
+          )}
         </div>
 
-        {showError && <p>Max words reached</p>}
+        {/* {showError && <p>Max words reached</p>} */}
       </a>
     </>
   );

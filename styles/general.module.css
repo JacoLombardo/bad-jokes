@@ -1,0 +1,15 @@
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* INTRO */
+
+.intro_div {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: large;
+}

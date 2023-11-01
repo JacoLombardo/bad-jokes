@@ -1,17 +1,44 @@
 /* CARD */
 
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .card_container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 80%;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+
+  animation: slideInRight ease-out 1s forwards;
 }
 
 .card {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-color: coral;
   border-radius: 10px;
   border: 2px solid black;
@@ -20,6 +47,9 @@
   align-items: center;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  margin: 20px;
+
+  position: relative;
 }
 
 .card:hover {
@@ -33,14 +63,45 @@
   font-size: 20px;
 }
 
+/* TOOLTIP */
+
+.card .tooltiptext {
+  width: 120px;
+  background-color: darkred;
+  color: #fff;
+  font-size: smaller;
+  text-align: center;
+  border-radius: 6px;
+  border: solid black 1px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.card .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: darkred transparent transparent transparent;
+}
+
 /* AVATAR */
 
 .avatar_container {
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
   position: relative;
+
+  animation: slideInLeft ease-out 1s forwards;
 }
 
 .avatar {
@@ -48,9 +109,9 @@
   display: inline-block;
 }
 
-.tooltiptext0,
-.tooltiptext1,
-.tooltiptext2 {
+.lettering0,
+.lettering1,
+.lettering2 {
   position: absolute;
   width: 80px;
   height: 55px;
@@ -63,30 +124,30 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 10px;
 }
 
-.avatar .tooltiptext0::after,
-.avatar .tooltiptext1::after,
-.avatar .tooltiptext2::after {
+.avatar .lettering0::after,
+.avatar .lettering1::after,
+.avatar .lettering2::after {
   content: "";
   position: absolute;
   border-width: 10px;
   border-style: solid;
 }
 
-.avatar .tooltiptext0::after {
+.avatar .lettering0::after {
   top: 100%;
   left: 50%;
   margin-left: -8px;
   border-color: white transparent transparent transparent;
 }
 
-.avatar .tooltiptext1::after {
+.avatar .lettering1::after {
   top: 40%;
   right: 98%;
   margin-top: -5px;
   border-color: transparent white transparent transparent;
 }
 
-.avatar .tooltiptext2::after {
+.avatar .lettering2::after {
   top: 40%;
   left: 99%;
   margin-top: -5px;

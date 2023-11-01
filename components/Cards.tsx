@@ -9,13 +9,31 @@ interface Props {
 
 export default function Cards({ selectedWords, setSelectedWords }: Props) {
   const words: string[] = [
-    "Cat",
+    "Queen",
     "Giant",
     "Sneeze",
     "Sun",
-    "Tree",
-    "Pluton",
+    "Tequila",
     "Flying",
+    "Dad",
+    "Surf",
+    "Carrot",
+    "Devil",
+    "Toy",
+    "Crocs",
+    "Monkey",
+    "T-Rex",
+    "Leggins",
+    "Spring",
+    "Bubbles",
+    "Spaghetti",
+    "Ball",
+    "Robot",
+    "Pan",
+    "WC",
+    "Koriander",
+    "Lollipop",
+    "Castle",
   ];
   return (
     <>
