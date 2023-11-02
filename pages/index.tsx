@@ -21,8 +21,10 @@ export default function Home() {
         },
         body: JSON.stringify({ words: selectedWords }).toLowerCase(),
       }).then((res) => res.json());
-      console.log(res.data.choices[0].text);
-      setJoke(formatJoke(res.data.choices[0].text));
+      if (res) {
+        console.log(res.data.choices[0].text);
+        setJoke(formatJoke(res.data.choices[0].text));
+      }
     } catch (error) {
       console.log(error);
     }
