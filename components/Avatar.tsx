@@ -26,9 +26,11 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
       <div className={styles.avatar_container}>
         <div className={styles.avatar}>
           <Image
-            src={"/Media/Avatar/good.png"}
-            title="test"
-            alt="test"
+            src={
+              "https://res.cloudinary.com/dtl48kr1u/image/upload/v1698932768/bad-jokes/Avatar/good_op827j.png"
+            }
+            title="Avatar"
+            alt="Avatar"
             width={"150"}
             height={"150"}
           />
