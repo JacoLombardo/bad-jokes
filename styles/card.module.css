@@ -121,14 +121,15 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #404040 transparent transparent transparent;
+  border-color: #cc7700 transparent transparent transparent;
 }
 
 .go .tooltiptext {
   width: 120px;
-  background-color: #404040;
-  color: #fff;
-  font-size: smaller;
+  background-color: #cc7700;
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 20px;
   text-align: center;
   border-radius: 6px;
   border: solid black 1px;
@@ -148,7 +149,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #404040 transparent transparent transparent;
+  border-color: #cc7700 transparent transparent transparent;
 }
 
 /* AVATAR */
@@ -233,11 +234,24 @@
   right: 80px;
   text-decoration: none;
   color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6px;
+
   border: 3px solid black;
-  border-radius: 20px;
-  height: fit-content;
+  border-radius: 35px;
+  width: 70px;
+  height: 70px;
   background-color: white;
+
   cursor: pointer;
+}
+
+.go:hover {
+  color: white;
+  background-color: black;
 }
 
 .go > h1 {

@@ -10,7 +10,6 @@ export default async function completion(
   const orderedWords: string = words.join(", ");
 
   const prompt = `Write me a joke with ${orderedWords}. Max 30 words.`;
-  console.log(prompt);
 
   if (req.method !== "POST") {
     return res.status(400).json({ error: "Invalid request" });
@@ -21,8 +20,6 @@ export default async function completion(
     prompt: prompt,
     max_tokens: 50,
   });
-
-  console.log(response);
 
   return res.status(200).json({
     data: response,
