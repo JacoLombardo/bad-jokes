@@ -10,15 +10,18 @@ export default function Intro({ setGo }: Props) {
   return (
     <>
       <div className={styles.intro_div}>
-        <p>
-          Do you want to soffocate your friends with horrible jokes but none
-          come to mind?
-        </p>
-        <p>Then you are in the right place.</p>
+        <div>
+          <p>
+            Do you want to soffocate your friends with horrible jokes but none
+            come to mind?
+          </p>
+          <p>Then you are in the right place.</p>
+        </div>
         <a
           onClick={() => {
             setGo(true);
           }}
+          className={styles.intro_go}
         >
           <Image
             src={"/Media/Avatar/head.png"}
@@ -27,7 +30,6 @@ export default function Intro({ setGo }: Props) {
             width={"150"}
             height={"150"}
           />
-          Go!
         </a>
       </div>
     </>

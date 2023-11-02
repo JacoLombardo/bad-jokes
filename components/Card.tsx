@@ -34,7 +34,7 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
           className={styles.card}
           style={
             selectedWords.includes(word)
-              ? { backgroundColor: "darkred", color: "white" }
+              ? { backgroundColor: "#404040", color: "white" }
               : {}
           }
         >
@@ -43,8 +43,6 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
             <span className={styles.tooltiptext}>Max words number reached</span>
           )}
         </div>
-
-        {/* {showError && <p>Max words reached</p>} */}
       </a>
     </>
   );
