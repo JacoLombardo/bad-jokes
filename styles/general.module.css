@@ -1,14 +1,8 @@
 .title {
   margin-top: 60px;
-  text-align: center;
-  border: 2px ridge black;
-  border-width: 5px;
-  box-sizing: border-box;
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
-  padding: 5px;
-  background-color: white;
 }
 
 /* INTRO */

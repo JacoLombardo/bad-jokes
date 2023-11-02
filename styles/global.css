@@ -1,7 +1,9 @@
 body {
-  background: url("/Media/dotted_background.jpg");
+  /* background: url("/Media/dotted_background.jpg"); */
+  background: url("/Media/comics.jpg") center;
+  background-size: 150%;
   background-attachment: fixed;
-  font-family: "poppins";
+  font-family: "badaboom";
 }
 
 hr {
@@ -14,4 +16,9 @@ hr {
 @font-face {
   font-family: "poppins";
   src: url(Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "badaboom";
+  src: url(Badaboom.ttf);
 }

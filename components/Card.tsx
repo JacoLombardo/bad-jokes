@@ -31,11 +31,8 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
     <>
       <a onClick={selectWord}>
         <div
-          className={styles.card}
-          style={
-            selectedWords.includes(word)
-              ? { backgroundColor: "#404040", color: "white" }
-              : {}
+          className={
+            selectedWords.includes(word) ? styles.card_clicked : styles.card
           }
         >
           <h1 className={styles.card_title}>{word}</h1>

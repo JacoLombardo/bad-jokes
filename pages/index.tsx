@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "@/styles/general.module.css";
 import Footer from "@/components/Footer";
 import { formatJoke } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Home() {
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
@@ -29,7 +30,21 @@ export default function Home() {
 
   return (
     <>
-      <h1 className={styles.title}>Bad Jokes Generator</h1>
+      <div className={styles.title}>
+        <Image
+          src={"/Media/title.png"}
+          title="title"
+          alt="title"
+          width={"0"}
+          height={"0"}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </div>
+
       {!go && <Intro setGo={setGo} />}
       {go && (
         <div>
