@@ -34,7 +34,7 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
             width={"150"}
             height={"150"}
           />
-          {selectedWords[0] && (
+          {/* {selectedWords[0] && (
             <span
               className={styles.lettering0}
               style={{
@@ -66,6 +66,21 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
             >
               {selectedWords[2]}
             </span>
+          )} */}
+          {selectedWords[0] && (
+            <div className={styles.balloon0}>
+              <p>{selectedWords[0]}</p>
+            </div>
+          )}
+          {selectedWords[1] && (
+            <div className={styles.balloon1}>
+              <p>{selectedWords[1]}</p>
+            </div>
+          )}
+          {selectedWords[2] && (
+            <div className={styles.balloon2}>
+              <p>{selectedWords[2]}</p>
+            </div>
           )}
         </div>
         {/* {joke && (

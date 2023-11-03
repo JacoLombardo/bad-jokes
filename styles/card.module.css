@@ -268,3 +268,49 @@
   font-size: 40px;
   font-weight: bolder;
 }
+
+/* BALLOON */
+
+.balloon0,
+.balloon1,
+.balloon2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.balloon0 {
+  background: url("/Media/Balloons/balloon-top.png"), center;
+  background-size: 100%;
+  top: -90px;
+  width: 130px;
+  height: 110px;
+  justify-content: center;
+}
+.balloon0,
+.balloon1,
+.balloon2 > p {
+  font-size: 25px;
+}
+.balloon1 {
+  background: url("/Media/Balloons/balloon-left.png"), center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 100px;
+  top: -10px;
+  left: -150px;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+.balloon2 {
+  background: url("/Media/Balloons/balloon-right.png"), center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 90px;
+  top: 30px;
+  right: -160px;
+  justify-content: flex-start;
+  padding-left: 80px;
+}
