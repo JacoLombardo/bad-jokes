@@ -50,7 +50,8 @@
 }
 
 .intro_avatar:hover {
-  background: url("/Media/Avatar/linguaccia.png") center;
+  background: url(https://res.cloudinary.com/dtl48kr1u/image/upload/v1699006514/bad-jokes/Avatar/linguaccia_kf6hlw.png)
+    center;
   background-size: 100%;
   animation-name: spin;
 }

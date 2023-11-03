@@ -8,7 +8,9 @@ export default function Modal({ setIsOpen, joke }: any) {
       <div className={styles.centered}>
         <div>
           <Image
-            src={"/Media/balloon.png"}
+            src={
+              "https://res.cloudinary.com/dtl48kr1u/image/upload/v1699006524/bad-jokes/balloon_hrsfyq.png"
+            }
             title="Avatar"
             alt="Avatar"
             width="0"
