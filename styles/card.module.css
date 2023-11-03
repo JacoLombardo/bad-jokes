@@ -165,6 +165,7 @@
 .avatar {
   position: relative;
   margin-left: 80px;
+  width: fit-content;
   /* background: url("/Media/Balloons/balloon-explosion.png") center;
   background-size: 60%;
   background-repeat: no-repeat;
