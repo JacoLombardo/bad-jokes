@@ -34,39 +34,6 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
             width={"150"}
             height={"150"}
           />
-          {/* {selectedWords[0] && (
-            <span
-              className={styles.lettering0}
-              style={{
-                top: "-40%",
-                left: "30%",
-              }}
-            >
-              {selectedWords[0]}
-            </span>
-          )}
-          {selectedWords[1] && (
-            <span
-              className={styles.lettering1}
-              style={{
-                top: "15%",
-                left: "110%",
-              }}
-            >
-              {selectedWords[1]}
-            </span>
-          )}
-          {selectedWords[2] && (
-            <span
-              className={styles.lettering2}
-              style={{
-                top: "15%",
-                right: "100%",
-              }}
-            >
-              {selectedWords[2]}
-            </span>
-          )} */}
           {selectedWords[0] && (
             <div className={styles.balloon0}>
               <p>{selectedWords[0]}</p>
@@ -74,12 +41,16 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
           )}
           {selectedWords[1] && (
             <div className={styles.balloon1}>
-              <p>{selectedWords[1]}</p>
+              <div>
+                <p>{selectedWords[1]}</p>
+              </div>
             </div>
           )}
           {selectedWords[2] && (
             <div className={styles.balloon2}>
-              <p>{selectedWords[2]}</p>
+              <div>
+                <p>{selectedWords[2]}</p>
+              </div>
             </div>
           )}
         </div>

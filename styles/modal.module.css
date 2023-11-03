@@ -1,26 +1,37 @@
-.darkBG {
+.modal_background {
   background-color: rgba(0, 0, 0, 0.2);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
 }
-.centered {
+.modal {
   position: fixed;
   z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.centered > div > h4 {
+
+.modal > div {
   position: absolute;
-  bottom: 330px;
-  left: 360px;
+  width: 510px;
+  height: 300px;
+  bottom: 160px;
+  left: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal > div > h4 {
   font-size: 50px;
-  max-width: 700px;
+  max-width: 530px;
+  text-align: center;
+  color: black;
 }
 
 .close_button {
