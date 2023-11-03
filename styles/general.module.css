@@ -7,9 +7,34 @@
   }
 }
 
+@media (max-width: 768px) {
+  .intro_div {
+    margin-top: 150px;
+  }
+  .title {
+    width: 100%;
+  }
+  .title_img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro_div {
+    margin-top: 100px;
+  }
+  .title {
+    width: 50%;
+  }
+  .title_img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .title {
   margin-top: 30px;
-  width: fit-content;
   margin-right: auto;
   margin-left: auto;
 }
@@ -18,7 +43,6 @@
 
 .intro_div {
   width: 80%;
-  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;

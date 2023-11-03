@@ -1,6 +1,20 @@
+@media (max-width: 768px) {
+  body {
+    background: url("/Media/comics-rotate.jpg") center;
+    background-repeat: no-repeat;
+    background-size: 380%;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url("/Media/comics.jpg") center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+  }
+}
+
 body {
-  background: url("/Media/comics.jpg") center;
-  background-size: 150%;
   background-attachment: fixed;
   font-family: "badaboom";
 }

@@ -87,6 +87,12 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
           <h1>GO!</h1>
         </a>
       </div>
+      <a onClick={getJokeHandler} className={styles.go_out}>
+        {showError && (
+          <span className={styles.tooltiptext}>Select at least two words</span>
+        )}
+        <h1>GO!</h1>
+      </a>
     </>
   );
 }
