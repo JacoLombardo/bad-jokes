@@ -1,3 +1,12 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .title {
   margin-top: 60px;
   width: fit-content;
@@ -25,4 +34,23 @@
 
 .intro_go {
   cursor: pointer;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.intro_avatar {
+  animation: 0.5s linear 2;
+  background: url(https://res.cloudinary.com/dtl48kr1u/image/upload/v1698932768/bad-jokes/Avatar/head2_qhf6zd.png)
+    center;
+  background-size: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+.intro_avatar:hover {
+  background: url("/Media/Avatar/linguaccia.png") center;
+  background-size: 100%;
+  animation-name: spin;
 }

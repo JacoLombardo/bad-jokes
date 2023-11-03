@@ -6,11 +6,13 @@ import styles from "@/styles/general.module.css";
 import Footer from "@/components/Footer";
 import { formatJoke } from "@/lib/utils";
 import Image from "next/image";
+import Modal from "@/components/Modal";
 
 export default function Home() {
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
   const [go, setGo] = useState<boolean>(false);
   const [joke, setJoke] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const getJoke = async () => {
     try {
@@ -21,10 +23,9 @@ export default function Home() {
         },
         body: JSON.stringify({ words: selectedWords }).toLowerCase(),
       }).then((res) => res.json());
-      if (res) {
-        console.log(res.data.choices[0].text);
-        setJoke(formatJoke(res.data.choices[0].text));
-      }
+      console.log(res.data.choices[0].text);
+      setJoke(formatJoke(res.data.choices[0].text));
+      setIsOpen(true);
     } catch (error) {
       console.log(error);
     }
@@ -50,6 +51,7 @@ export default function Home() {
       {!go && <Intro setGo={setGo} />}
       {go && (
         <div>
+          {isOpen && <Modal setIsOpen={setIsOpen} joke={joke} />}
           <Avatar selectedWords={selectedWords} joke={joke} getJoke={getJoke} />
           <Cards
             selectedWords={selectedWords}

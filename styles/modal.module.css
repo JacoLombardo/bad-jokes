@@ -1,0 +1,46 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.centered {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered > div > h4 {
+  position: absolute;
+  bottom: 330px;
+  left: 360px;
+  font-size: 50px;
+  max-width: 700px;
+}
+
+.close_button {
+  cursor: pointer;
+  font-weight: bolder;
+  border: 5px solid black;
+  border-radius: 33px;
+  font-size: 30px;
+  color: black;
+  height: 50px;
+  width: 50px;
+  background: white;
+  transition: all 0.25s ease;
+  position: absolute;
+  right: 200px;
+  top: 100px;
+}
+
+.close_button:hover {
+  background-color: black;
+  color: white;
+  border: 5px solid white;
+}

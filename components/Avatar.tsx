@@ -68,11 +68,29 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
             </span>
           )}
         </div>
-        {joke && (
+        {/* {joke && (
           <div className={styles.joke_div}>
             <h4>{joke}</h4>
           </div>
-        )}
+        )} */}
+
+        {/* {joke && (
+          <div className={styles.joke_div}>
+            <Image
+              src={"/Media/balloon.png"}
+              title="Avatar"
+              alt="Avatar"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{
+                width: "600px",
+                height: "350px",
+              }}
+            />
+            <h4>{joke}</h4>
+          </div>
+        )} */}
 
         <a onClick={getJokeHandler} className={styles.go}>
           {showError && (
