@@ -18,10 +18,7 @@ export default function Modal({ setIsOpen, joke }: any) {
           width="0"
           height="0"
           sizes="100vw"
-          style={{
-            width: "1000px",
-            height: "650px",
-          }}
+          className={styles.modal_balloon}
         />
         <div>
           <h4>{joke}</h4>

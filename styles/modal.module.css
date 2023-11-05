@@ -1,13 +1,65 @@
 @media (max-width: 768px) {
+  .modal {
+    top: 40%;
+    left: 50%;
+  }
+  .modal > div {
+    width: 290px;
+    height: 120px;
+    bottom: 60px;
+    left: 60px;
+  }
+  .modal > div > h4 {
+    font-size: 20px;
+    max-width: 230px;
+  }
+  .modal_balloon {
+    width: 400px;
+    height: 250px;
+  }
+  .close_button {
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    /* transition: all 0.25s ease; */
+    right: 70px;
+    top: 30px;
+  }
 }
 
 @media (min-width: 768px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+  }
+  .modal > div {
+    width: 510px;
+    height: 300px;
+    bottom: 160px;
+    left: 270px;
+  }
+  .modal_balloon {
+    width: 1000px;
+    height: 650px;
+  }
+  .modal > div > h4 {
+    font-size: 50px;
+    max-width: 530px;
+  }
+  .close_button {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    transition: all 0.25s ease;
+    right: 200px;
+    top: 100px;
+  }
 }
 
 .modal_background {
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 100%;
+  height: 400%;
   z-index: 3;
   top: 50%;
   left: 50%;
@@ -17,25 +69,25 @@
 .modal {
   position: fixed;
   z-index: 3;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
   transform: translate(-50%, -50%);
 }
 
 .modal > div {
   position: absolute;
-  width: 510px;
+  /* width: 510px;
   height: 300px;
   bottom: 160px;
-  left: 270px;
+  left: 270px; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal > div > h4 {
-  font-size: 50px;
-  max-width: 530px;
+  /* font-size: 50px;
+  max-width: 530px; */
   text-align: center;
   color: black;
 }
@@ -45,15 +97,15 @@
   font-weight: bolder;
   border: 5px solid black;
   border-radius: 33px;
-  font-size: 30px;
+  /* font-size: 30px; */
   color: black;
-  height: 50px;
-  width: 50px;
+  /* height: 50px;
+  width: 50px; */
   background: white;
   transition: all 0.25s ease;
   position: absolute;
-  right: 200px;
-  top: 100px;
+  /* right: 200px;
+  top: 100px; */
 }
 
 .close_button:hover {
