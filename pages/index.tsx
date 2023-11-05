@@ -41,10 +41,6 @@ export default function Home() {
           width={"0"}
           height={"0"}
           sizes="100vw"
-          // style={{
-          //   width: "100%",
-          //   height: "auto",
-          // }}
           className={styles.title_img}
         />
       </div>
@@ -53,6 +49,9 @@ export default function Home() {
       {go && (
         <div>
           {isOpen && <Modal setIsOpen={setIsOpen} joke={joke} />}
+          <div className={styles.instructions}>
+            <p>Select up to three words to create your bad joke!</p>
+          </div>
           <Avatar selectedWords={selectedWords} joke={joke} getJoke={getJoke} />
           <Cards
             selectedWords={selectedWords}

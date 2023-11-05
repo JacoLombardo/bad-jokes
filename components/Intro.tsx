@@ -23,16 +23,6 @@ export default function Intro({ setGo }: Props) {
           }}
           className={styles.intro_go}
         >
-          {/* <Image
-            src={
-              "https://res.cloudinary.com/dtl48kr1u/image/upload/v1698932768/bad-jokes/Avatar/head2_qhf6zd.png"
-            }
-            title="Go!"
-            alt="Go!"
-            width={"150"}
-            height={"150"}
-            className={styles.intro_avatar}
-          /> */}
           <div className={styles.intro_avatar}></div>
         </a>
       </div>

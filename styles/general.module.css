@@ -9,7 +9,12 @@
 
 @media (max-width: 768px) {
   .intro_div {
-    margin-top: 150px;
+    width: 80%;
+    margin-top: 100px;
+  }
+  .intro_div > div {
+    padding: 10px;
+    font-size: 25px;
   }
   .title {
     width: 100%;
@@ -22,7 +27,12 @@
 
 @media (min-width: 768px) {
   .intro_div {
+    width: 60%;
     margin-top: 100px;
+  }
+  .intro_div > div {
+    padding: 10px;
+    font-size: 35px;
   }
   .title {
     width: 50%;
@@ -42,18 +52,17 @@
 /* INTRO */
 
 .intro_div {
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: large;
 }
 
 .intro_div > div {
   border: groove 3px black;
   margin-bottom: 30px;
   background-color: white;
-  padding: 10px;
+  /* padding: 10px;
+  font-size: 35px; */
 }
 
 .intro_go {
@@ -78,4 +87,18 @@
     center;
   background-size: 100%;
   animation-name: spin;
+}
+
+/* INSTRUCTIONS */
+
+.instructions {
+  width: fit-content;
+  border: groove 3px black;
+  margin-bottom: 30px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 15px 25px 5px 25px;
+  font-size: 25px;
 }

@@ -50,6 +50,14 @@
   .card_container {
     margin-top: 60px;
   }
+  .card:hover,
+  .card_clicked:hover {
+    background-color: #cc7700;
+    color: white;
+    text-shadow: 2px 2px black;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 .card_container {
@@ -91,14 +99,14 @@
   animation: spin 0.5s linear 1;
 }
 
-.card:hover,
+/* .card:hover,
 .card_clicked:hover {
   background-color: #cc7700;
   color: white;
   text-shadow: 2px 2px black;
   transform: translateY(-10px);
   transition: transform 0.3s ease-in-out;
-}
+} */
 
 .card_title {
   font-size: 25px;
