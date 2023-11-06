@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
   body {
     background: url("/Media/comics-rotate.jpg") center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 380%;
   }

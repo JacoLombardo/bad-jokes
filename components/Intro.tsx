@@ -1,5 +1,4 @@
 import styles from "@/styles/general.module.css";
-import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
 
 interface Props {
