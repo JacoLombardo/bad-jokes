@@ -166,8 +166,6 @@
 /* AVATAR */
 
 @media (max-width: 768px) {
-  .avatar {
-  }
   .avatar_container {
     height: 150px;
   }

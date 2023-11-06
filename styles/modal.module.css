@@ -20,7 +20,7 @@
   .close_button {
     font-size: 15px;
     height: 30px;
-    width: 30px;
+    width: auto;
     right: 70px;
     top: 30px;
   }
