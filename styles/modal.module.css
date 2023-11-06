@@ -67,6 +67,12 @@
   transform: translate(-50%, -50%);
   position: absolute;
 }
+
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 .modal {
   position: fixed;
   z-index: 3;

@@ -28,6 +28,9 @@ export default function Home() {
       console.log(res.data.choices[0].text);
       setJoke(formatJoke(res.data.choices[0].text));
       setIsOpen(true);
+      if (typeof window != "undefined" && window.document) {
+        document.body.style.overflow = "hidden";
+      }
     } catch (error) {
       console.log(error);
     }

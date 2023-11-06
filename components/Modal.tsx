@@ -39,6 +39,7 @@ export default function Modal({ setIsOpen, joke, setAvatarSelect }: Props) {
           onClick={() => {
             setIsOpen(false);
             setAvatarSelect("good");
+            document.body.style.overflow = "unset";
           }}
         >
           X
