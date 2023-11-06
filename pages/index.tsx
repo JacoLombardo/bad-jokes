@@ -37,7 +37,9 @@ export default function Home() {
     <>
       <div className={styles.title}>
         <Image
-          src={"/Media/title.png"}
+          src={
+            "https://res.cloudinary.com/dtl48kr1u/image/upload/v1699270985/bad-jokes/title2_s1prxl.png"
+          }
           title="title"
           alt="title"
           width={"0"}
@@ -62,7 +64,6 @@ export default function Home() {
           </div>
           <Avatar
             selectedWords={selectedWords}
-            joke={joke}
             getJoke={getJoke}
             avatarSelect={avatarSelect}
             setAvatarSelect={setAvatarSelect}
@@ -71,9 +72,9 @@ export default function Home() {
             selectedWords={selectedWords}
             setSelectedWords={setSelectedWords}
           />
-          <Footer />
         </div>
       )}
+      <Footer />
     </>
   );
 }

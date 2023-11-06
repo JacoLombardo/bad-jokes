@@ -43,12 +43,15 @@
 @media (max-width: 768px) {
   .card_container {
     margin-top: 20px;
+    padding-bottom: 250px;
   }
 }
 
 @media (min-width: 768px) {
   .card_container {
     margin-top: -45px;
+
+    padding-bottom: 200px;
   }
   .card:hover,
   .card_clicked:hover {

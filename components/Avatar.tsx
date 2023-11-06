@@ -5,7 +5,6 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface Props {
   selectedWords: string[];
-  joke: string | null;
   getJoke: Function;
   avatarSelect: string;
   setAvatarSelect: Dispatch<SetStateAction<string>>;
@@ -13,7 +12,6 @@ interface Props {
 
 export default function Avatar({
   selectedWords,
-  joke,
   getJoke,
   avatarSelect,
   setAvatarSelect,
