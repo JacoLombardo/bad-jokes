@@ -1,10 +1,4 @@
 @media (max-width: 768px) {
-  body {
-    /* background: url("/Media/comics-rotate.jpg");
-    background-position: top;
-    background-repeat: repeat-y;
-    background-size: 580%; */
-  }
 }
 
 @media (min-width: 768px) {
