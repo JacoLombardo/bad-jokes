@@ -33,8 +33,8 @@
   }
   .modal > div {
     width: 510px;
-    height: 300px;
-    bottom: 160px;
+    height: 270px;
+    bottom: 180px;
     left: 270px;
   }
   .modal_balloon {
@@ -42,8 +42,8 @@
     height: 650px;
   }
   .modal > div > h4 {
-    font-size: 50px;
-    max-width: 530px;
+    font-size: 40px;
+    max-width: 500px;
   }
   .close_button {
     font-size: 30px;
