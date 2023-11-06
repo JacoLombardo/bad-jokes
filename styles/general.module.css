@@ -115,7 +115,7 @@
 
 /* FOOTER */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .icons_div {
     position: absolute;
     left: 45%;

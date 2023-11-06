@@ -170,18 +170,28 @@
 
 @media (max-width: 768px) {
   .avatar_container {
-    height: 150px;
+    width: 100%;
+    height: 260px;
+  }
+  .avatar {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
   }
 }
 
 @media (min-width: 768px) {
+  .avatar_container {
+    width: 750px;
+  }
   .avatar {
-    margin-left: 80px;
+    width: 500px;
+    height: 270px;
   }
 }
 
 .avatar_container {
-  width: 40%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -191,7 +201,9 @@
 
 .avatar {
   position: relative;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /* BALLOON */
@@ -203,8 +215,8 @@
     font-size: 20px;
   }
   .balloon0 {
-    top: -90px;
-    left: 20px;
+    bottom: 60%;
+    left: 38%;
     width: 120px;
     height: 100px;
   }
@@ -212,8 +224,8 @@
   .balloon1 {
     width: 150px;
     height: 100px;
-    top: -10px;
-    left: -110px;
+    bottom: 25%;
+    right: 60%;
   }
   .balloon1 > div {
     width: 80px;
@@ -224,8 +236,8 @@
   .balloon2 {
     width: 140px;
     height: 90px;
-    top: 30px;
-    right: -110px;
+    bottom: 15%;
+    left: 60%;
   }
   .balloon2 > div {
     width: 80px;
@@ -245,15 +257,15 @@
     background-size: 100%;
     width: 130px;
     height: 110px;
-    top: -90px;
+    bottom: 150px;
   }
 
   .balloon1 {
     background-size: 100%;
     width: 180px;
     height: 100px;
-    top: -10px;
-    left: -150px;
+    bottom: 60px;
+    left: 10px;
   }
   .balloon1 > div {
     width: 100px;
@@ -265,8 +277,8 @@
     background-size: 100%;
     width: 180px;
     height: 90px;
-    top: 30px;
-    right: -160px;
+    bottom: 30px;
+    right: 10px;
   }
   .balloon2 > div {
     width: 100px;
@@ -310,9 +322,9 @@
   position: absolute;
 }
 
-/* JOKE */
+/* GO */
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 768px) {
   .go {
     position: absolute;
   }
@@ -321,7 +333,7 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
   .go {
     visibility: hidden;
   }
@@ -329,10 +341,10 @@
     margin-top: 10px;
     position: sticky;
     top: 20px;
-    left: 41%;
+    left: 38%;
   }
 }
-
+/* 
 .joke_div {
   position: absolute;
   bottom: -80px;
@@ -345,7 +357,7 @@
   bottom: 120px;
   left: 170px;
   max-width: 320px;
-}
+} */
 
 .go,
 .go_out {
@@ -359,18 +371,20 @@
   align-items: center;
   padding-top: 6px;
 
-  border: 3px solid black;
-  border-radius: 35px;
-  width: 70px;
-  height: 70px;
-  background-color: white;
+  width: 100px;
+  height: 100px;
+
+  background: url("/Media/explosion1.png") center;
+  background-size: 100%;
 
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.go:hover {
+.go:hover,
+.go_out:hover {
   color: white;
-  background-color: black;
+  transform: scale(1.5);
 }
 
 .go,
