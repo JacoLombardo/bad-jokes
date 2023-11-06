@@ -1,28 +1,28 @@
 @media (max-width: 768px) {
   .modal {
-    top: 40%;
+    top: 50%;
     left: 50%;
   }
   .modal > div {
-    width: 290px;
-    height: 120px;
-    bottom: 60px;
-    left: 60px;
+    width: 200px;
+    height: 250px;
+    top: 160px;
+    left: 110px;
   }
   .modal > div > h4 {
-    font-size: 20px;
-    max-width: 230px;
+    font-size: 25px;
+    max-width: 200px;
   }
   .modal_balloon {
     width: 400px;
-    height: 250px;
+    height: 550px;
   }
   .close_button {
     font-size: 15px;
     height: 30px;
-    width: auto;
+    width: 30px;
     right: 70px;
-    top: 30px;
+    top: 100px;
   }
 }
 
