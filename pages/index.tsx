@@ -38,46 +38,48 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.title}>
-        <Image
-          src={
-            "https://res.cloudinary.com/dtl48kr1u/image/upload/v1699270985/bad-jokes/title2_s1prxl.png"
-          }
-          title="title"
-          alt="title"
-          width={"0"}
-          height={"0"}
-          sizes="100vw"
-          className={styles.title_img}
-        />
-      </div>
-
-      {!go && <Intro setGo={setGo} />}
-      {go && (
-        <div>
-          {isOpen && (
-            <Modal
-              setIsOpen={setIsOpen}
-              joke={joke}
-              setAvatarSelect={setAvatarSelect}
-            />
-          )}
-          <div className={styles.instructions}>
-            <p>Select up to three words to create your bad joke!</p>
-          </div>
-          <Avatar
-            selectedWords={selectedWords}
-            getJoke={getJoke}
-            avatarSelect={avatarSelect}
-            setAvatarSelect={setAvatarSelect}
-          />
-          <Cards
-            selectedWords={selectedWords}
-            setSelectedWords={setSelectedWords}
+      <div id="content">
+        <div className={styles.title}>
+          <Image
+            src={
+              "https://res.cloudinary.com/dtl48kr1u/image/upload/v1699270985/bad-jokes/title2_s1prxl.png"
+            }
+            title="title"
+            alt="title"
+            width={"0"}
+            height={"0"}
+            sizes="100vw"
+            className={styles.title_img}
           />
         </div>
-      )}
-      <Footer />
+
+        {!go && <Intro setGo={setGo} />}
+        {go && (
+          <div>
+            {isOpen && (
+              <Modal
+                setIsOpen={setIsOpen}
+                joke={joke}
+                setAvatarSelect={setAvatarSelect}
+              />
+            )}
+            <div className={styles.instructions}>
+              <p>Select up to three words to create your bad joke!</p>
+            </div>
+            <Avatar
+              selectedWords={selectedWords}
+              getJoke={getJoke}
+              avatarSelect={avatarSelect}
+              setAvatarSelect={setAvatarSelect}
+            />
+            <Cards
+              selectedWords={selectedWords}
+              setSelectedWords={setSelectedWords}
+            />
+          </div>
+        )}
+        <Footer />
+      </div>
     </>
   );
 }
