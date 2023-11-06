@@ -38,7 +38,8 @@ export default function Home() {
 
   return (
     <>
-      <div id="content">
+      <div className={styles.background}></div>
+      <div className={styles.content}>
         <div className={styles.title}>
           <Image
             src={

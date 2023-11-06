@@ -1,27 +1,15 @@
 @media (max-width: 768px) {
   body {
-    background: url("/Media/comics-rotate.jpg") center;
-    /* background-position: top; */
-    /* background-attachment: fixed; */
-    /* background-repeat: no-repeat; */
-    /* background-size: 380%; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-  }
-
-  #content {
-    position: absolute;
+    /* background: url("/Media/comics-rotate.jpg");
+    background-position: top;
+    background-repeat: repeat-y;
+    background-size: 580%; */
   }
 }
 
 @media (min-width: 768px) {
   body {
     background: url("/Media/comics.jpg") center fixed no-repeat;
-    /* background-attachment: fixed;
-    background-repeat: no-repeat; */
     background-size: 150%;
   }
 }
