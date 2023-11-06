@@ -1,12 +1,22 @@
 import styles from "@/styles/modal.module.css";
 import Image from "next/image";
+import { Dispatch, SetStateAction } from "react";
 
-export default function Modal({ setIsOpen, joke }: any) {
+interface Props {
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  joke: string | null;
+  setAvatarSelect: Dispatch<SetStateAction<string>>;
+}
+
+export default function Modal({ setIsOpen, joke, setAvatarSelect }: Props) {
   return (
     <>
       <div
         className={styles.modal_background}
-        onClick={() => setIsOpen(false)}
+        onClick={() => {
+          setIsOpen(false);
+          setAvatarSelect("good");
+        }}
       />
       <div className={styles.modal}>
         <Image
@@ -26,7 +36,10 @@ export default function Modal({ setIsOpen, joke }: any) {
 
         <button
           className={styles.close_button}
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+            setAvatarSelect("good");
+          }}
         >
           X
         </button>

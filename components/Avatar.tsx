@@ -1,14 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import styles from "@/styles/card.module.css";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface Props {
   selectedWords: string[];
   joke: string | null;
   getJoke: Function;
+  avatarSelect: string;
+  setAvatarSelect: Dispatch<SetStateAction<string>>;
 }
 
-export default function Avatar({ selectedWords, joke, getJoke }: Props) {
+export default function Avatar({
+  selectedWords,
+  joke,
+  getJoke,
+  avatarSelect,
+  setAvatarSelect,
+}: Props) {
   const [showError, setShowError] = useState<boolean>(false);
 
   const getJokeHandler = () => {
@@ -21,19 +30,53 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
       getJoke();
     }
   };
+
+  useEffect(() => {
+    if (selectedWords.length !== 0) {
+      setAvatarSelect("good");
+    } else {
+      setAvatarSelect("greet");
+    }
+  }, [selectedWords]);
   return (
     <>
       <div className={styles.avatar_container}>
         <div className={styles.avatar}>
-          <Image
-            src={
-              "https://res.cloudinary.com/dtl48kr1u/image/upload/v1698932768/bad-jokes/Avatar/good_op827j.png"
-            }
-            title="Avatar"
-            alt="Avatar"
-            width={"150"}
-            height={"150"}
-          />
+          {avatarSelect === "stressed" ? (
+            <Image
+              src={
+                "https://res.cloudinary.com/dtl48kr1u/image/upload/v1698932768/bad-jokes/Avatar/stressed_wv9yjt.png"
+              }
+              title="Avatar"
+              alt="Avatar"
+              width={"150"}
+              height={"150"}
+            />
+          ) : (
+            <div>
+              {avatarSelect === "greet" ? (
+                <Image
+                  src={
+                    "https://res.cloudinary.com/dtl48kr1u/image/upload/v1699259725/bad-jokes/Avatar/greet_h2mf1g.png"
+                  }
+                  title="Avatar"
+                  alt="Avatar"
+                  width={"150"}
+                  height={"150"}
+                />
+              ) : (
+                <Image
+                  src={
+                    "https://res.cloudinary.com/dtl48kr1u/image/upload/v1698932768/bad-jokes/Avatar/good_op827j.png"
+                  }
+                  title="Avatar"
+                  alt="Avatar"
+                  width={"150"}
+                  height={"150"}
+                />
+              )}
+            </div>
+          )}
           {selectedWords[0] && (
             <div className={styles.balloon0}>
               <p>{selectedWords[0]}</p>
@@ -54,30 +97,6 @@ export default function Avatar({ selectedWords, joke, getJoke }: Props) {
             </div>
           )}
         </div>
-        {/* {joke && (
-          <div className={styles.joke_div}>
-            <h4>{joke}</h4>
-          </div>
-        )} */}
-
-        {/* {joke && (
-          <div className={styles.joke_div}>
-            <Image
-              src={"/Media/balloon.png"}
-              title="Avatar"
-              alt="Avatar"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{
-                width: "600px",
-                height: "350px",
-              }}
-            />
-            <h4>{joke}</h4>
-          </div>
-        )} */}
-
         <a onClick={getJokeHandler} className={styles.go}>
           {showError && (
             <span className={styles.tooltiptext}>

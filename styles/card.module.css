@@ -48,7 +48,7 @@
 
 @media (min-width: 768px) {
   .card_container {
-    margin-top: 60px;
+    margin-top: -45px;
   }
   .card:hover,
   .card_clicked:hover {
@@ -142,7 +142,7 @@
   border-color: #cc7700 transparent transparent transparent;
 }
 
-.go,
+.go .tooltiptext,
 .go_out .tooltiptext {
   width: 120px;
   background-color: #cc7700;
@@ -160,7 +160,7 @@
   margin-left: -60px;
 }
 
-.go,
+.go .tooltiptext::after,
 .go_out .tooltiptext::after {
   content: "";
   position: absolute;
@@ -346,13 +346,6 @@
   bottom: -80px;
   right: 180px;
   width: fit-content;
-  /* background-color: white; */
-  /* background: url("/Media/balloon.png");
-  background-size: 100%;
-  border: solid 2px black;
-  border-radius: 20px;
-  padding: 15px; */
-  /* max-width: 400px; */
 }
 
 .joke_div > h4 {

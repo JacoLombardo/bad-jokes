@@ -91,8 +91,19 @@
 
 /* INSTRUCTIONS */
 
+@media (max-width: 768px) {
+  .instructions {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .instructions {
+    width: fit-content;
+  }
+}
+
 .instructions {
-  width: fit-content;
   border: groove 4px black;
   margin-bottom: 30px;
   background-color: white;

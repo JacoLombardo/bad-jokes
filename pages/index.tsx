@@ -13,9 +13,11 @@ export default function Home() {
   const [go, setGo] = useState<boolean>(false);
   const [joke, setJoke] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [avatarSelect, setAvatarSelect] = useState<string>("greet");
 
   const getJoke = async () => {
     try {
+      setAvatarSelect("stressed");
       const res = await fetch("/api/completion", {
         method: "POST",
         headers: {
@@ -48,11 +50,23 @@ export default function Home() {
       {!go && <Intro setGo={setGo} />}
       {go && (
         <div>
-          {isOpen && <Modal setIsOpen={setIsOpen} joke={joke} />}
+          {isOpen && (
+            <Modal
+              setIsOpen={setIsOpen}
+              joke={joke}
+              setAvatarSelect={setAvatarSelect}
+            />
+          )}
           <div className={styles.instructions}>
             <p>Select up to three words to create your bad joke!</p>
           </div>
-          <Avatar selectedWords={selectedWords} joke={joke} getJoke={getJoke} />
+          <Avatar
+            selectedWords={selectedWords}
+            joke={joke}
+            getJoke={getJoke}
+            avatarSelect={avatarSelect}
+            setAvatarSelect={setAvatarSelect}
+          />
           <Cards
             selectedWords={selectedWords}
             setSelectedWords={setSelectedWords}
