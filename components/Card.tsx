@@ -39,8 +39,8 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
         >
           {selectedWords.includes(word) ? (
             <Image
-              // src={`/Media/Words-icons/${img}-on.png`}
-              src={`https://res.cloudinary.com/dtl48kr1u/image/upload/v1699373983/bad-jokes/Words-icons/${img}-on.png`}
+              src={`/Media/Words-icons/${img}-on.png`}
+              // src={`https://res.cloudinary.com/dtl48kr1u/image/upload/v1699373983/bad-jokes/Words-icons/${img}-on.png`}
               title={word}
               alt={word}
               width={80}
@@ -51,8 +51,8 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
             />
           ) : (
             <Image
-              // src={`/Media/Words-icons/${img}.png`}
-              src={`https://res.cloudinary.com/dtl48kr1u/image/upload/v1699373983/bad-jokes/Words-icons/${img}.png`}
+              src={`/Media/Words-icons/${img}.png`}
+              // src={`https://res.cloudinary.com/dtl48kr1u/image/upload/v1699373983/bad-jokes/Words-icons/${img}.png`}
               title={word}
               alt={word}
               width={80}
@@ -62,8 +62,8 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
             />
           )}
           <Image
-            // src={`/Media/Words-icons/${img}-on.png`}
-            src={`https://res.cloudinary.com/dtl48kr1u/image/upload/v1699373983/bad-jokes/Words-icons/${img}-on.png`}
+            src={`/Media/Words-icons/${img}-on.png`}
+            // src={`https://res.cloudinary.com/dtl48kr1u/image/upload/v1699373983/bad-jokes/Words-icons/${img}-on.png`}
             title={word}
             alt={word}
             width={80}
