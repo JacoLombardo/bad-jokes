@@ -46,6 +46,7 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
               width={80}
               height={80}
               sizes="100vw"
+              priority={true}
               className={styles.card_img_on}
               style={{ display: "block" }}
             />
@@ -58,6 +59,7 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
               width={80}
               height={80}
               sizes="100vw"
+              priority={true}
               className={styles.card_img}
             />
           )}
@@ -69,6 +71,7 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
             width={80}
             height={80}
             sizes="100vw"
+            priority={true}
             className={styles.card_img_on}
           />
           <h1 className={styles.card_title}>{word}</h1>
