@@ -55,9 +55,10 @@
   }
   .card:hover,
   .card_clicked:hover {
-    background-color: #cc7700;
+    background-color: #ffa500;
+    /* background-color: #cc7700;
     color: white;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px black; */
     transform: translateY(-10px);
     transition: transform 0.3s ease-in-out;
     height: 120px;
@@ -98,9 +99,10 @@
 }
 
 .card_clicked {
-  background-color: #cc7700;
+  /* background-color: #cc7700;
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px black; */
+  background-color: #ffa500;
   animation: spin 0.5s linear 1;
 }
 

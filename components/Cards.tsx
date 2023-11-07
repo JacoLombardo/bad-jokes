@@ -20,7 +20,7 @@ export default function Cards({ selectedWords, setSelectedWords }: Props) {
     "Carrot",
     "Devil",
     "Toy",
-    // "Crocs",
+    "Crocs",
     "Monkey",
     "T-Rex",
     "Leggins",
