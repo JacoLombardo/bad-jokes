@@ -60,6 +60,7 @@
     text-shadow: 2px 2px black;
     transform: translateY(-10px);
     transition: transform 0.3s ease-in-out;
+    height: 120px;
   }
 }
 
@@ -77,7 +78,7 @@
 .card,
 .card_clicked {
   width: 100px;
-  height: 100px;
+  height: 120px;
   border-radius: 10px;
   border: 2px solid black;
   display: flex;
@@ -88,6 +89,7 @@
   margin: 20px;
 
   position: relative;
+  flex-direction: column;
 }
 
 .card {
@@ -103,7 +105,27 @@
 }
 
 .card_title {
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+/* CARD IMAGE */
+
+.card_img {
+  display: block;
+}
+
+.card_img_on {
+  display: none;
+}
+
+.card:hover .card_img {
+  display: none;
+}
+.card:hover .card_img_on {
+  display: block;
 }
 
 /* TOOLTIP */

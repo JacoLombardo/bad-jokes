@@ -1,4 +1,5 @@
 import styles from "@/styles/card.module.css";
+import Image from "next/image";
 import { Dispatch, SetStateAction, useState } from "react";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 
 export default function Card({ word, selectedWords, setSelectedWords }: Props) {
   const [showError, setShowError] = useState<boolean>(false);
+  const img: string = word.toLowerCase();
 
   const selectWord = () => {
     if (selectedWords.length <= 2 && !selectedWords.includes(word)) {
@@ -35,6 +37,37 @@ export default function Card({ word, selectedWords, setSelectedWords }: Props) {
             selectedWords.includes(word) ? styles.card_clicked : styles.card
           }
         >
+          {selectedWords.includes(word) ? (
+            <Image
+              src={`/Media/Words-icons/${img}-on.png`}
+              title={word}
+              alt={word}
+              width={80}
+              height={80}
+              sizes="100vw"
+              className={styles.card_img_on}
+              style={{ display: "block" }}
+            />
+          ) : (
+            <Image
+              src={`/Media/Words-icons/${img}.png`}
+              title={word}
+              alt={word}
+              width={80}
+              height={80}
+              sizes="100vw"
+              className={styles.card_img}
+            />
+          )}
+          <Image
+            src={`/Media/Words-icons/${img}-on.png`}
+            title={word}
+            alt={word}
+            width={80}
+            height={80}
+            sizes="100vw"
+            className={styles.card_img_on}
+          />
           <h1 className={styles.card_title}>{word}</h1>
           {showError && (
             <span className={styles.tooltiptext}>Max words number reached</span>
