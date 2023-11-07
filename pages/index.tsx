@@ -62,6 +62,7 @@ export default function Home() {
                 setIsOpen={setIsOpen}
                 joke={joke}
                 setAvatarSelect={setAvatarSelect}
+                setSelectedWords={setSelectedWords}
               />
             )}
             <div className={styles.instructions}>

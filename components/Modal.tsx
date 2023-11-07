@@ -6,9 +6,15 @@ interface Props {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   joke: string | null;
   setAvatarSelect: Dispatch<SetStateAction<string>>;
+  setSelectedWords: Dispatch<SetStateAction<string[]>>;
 }
 
-export default function Modal({ setIsOpen, joke, setAvatarSelect }: Props) {
+export default function Modal({
+  setIsOpen,
+  joke,
+  setAvatarSelect,
+  setSelectedWords,
+}: Props) {
   return (
     <>
       <div
@@ -40,6 +46,7 @@ export default function Modal({ setIsOpen, joke, setAvatarSelect }: Props) {
             setIsOpen(false);
             setAvatarSelect("good");
             document.body.style.overflow = "unset";
+            setSelectedWords([]);
           }}
         >
           X
