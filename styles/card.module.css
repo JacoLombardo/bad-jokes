@@ -95,7 +95,8 @@
 }
 
 .card {
-  background-color: #fce704;
+  /* background-color: #fce704; */
+  background-color: white;
   animation: spinreverse 0.5s linear 1;
 }
 
@@ -383,11 +384,16 @@
   align-items: center;
   padding-top: 6px;
 
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 
-  background: url("/Media/explosion1.png") center;
-  background-size: 100%;
+  border: 4px solid black;
+  border-radius: 60px;
+  background-color: #ee5454;
+
+  /* background: url("/Media/explosion3.png") center;
+  background-repeat: no-repeat;
+  background-size: 150%; */
 
   cursor: pointer;
   transition: transform 0.2s;
