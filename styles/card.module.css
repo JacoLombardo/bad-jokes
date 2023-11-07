@@ -55,7 +55,8 @@
   }
   .card:hover,
   .card_clicked:hover {
-    background-color: #ffa500;
+    /* background-color: #faac53; */
+    background-color: #f78889;
     /* background-color: #cc7700;
     color: white;
     text-shadow: 2px 2px black; */
@@ -102,7 +103,8 @@
   /* background-color: #cc7700;
   color: white;
   text-shadow: 2px 2px black; */
-  background-color: #ffa500;
+  /* background-color: #FAAC53; */
+  background-color: #f78889;
   animation: spin 0.5s linear 1;
 }
 
