@@ -7,8 +7,8 @@ export default function MyApp({ Component, pageProps }: any) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Media/smile3.png" sizes="any" />
-        <title>Bad Jokes</title>
+        <link rel="icon" href="/Media/icon.png" sizes="any" />
+        <title>Very Bad Jokes</title>
       </Head>
       <Component {...pageProps} />
     </>
