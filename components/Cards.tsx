@@ -14,7 +14,6 @@ export default function Cards({ selectedWords, setSelectedWords }: Props) {
     "Sneeze",
     "Sun",
     "Tequila",
-    // "Flying",
     "Dad",
     "Surf",
     "Carrot",
@@ -31,7 +30,6 @@ export default function Cards({ selectedWords, setSelectedWords }: Props) {
     "Robot",
     "Pan",
     "WC",
-    // "Koriander",
     "Lollipop",
     "Castle",
   ];
